@@ -8,7 +8,7 @@ function logIn(){
     }
     else{
         if(username === 'username' && password === "password"){
-        window.location.href = "index.html";
+        window.location.href = "home.html";
         }else{
             error.style.visibility = 'visible';
             document.getElementById('error').textContent = 'Incorrect Username or Password';
