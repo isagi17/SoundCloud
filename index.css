@@ -1,0 +1,499 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+body{
+    background-color: #141414e8;
+}
+/*--navbar--*/
+.container{
+    display: flex;
+    height: 100vh;
+    gap: 50px
+}
+#sidemenu{
+    box-shadow: 0px 0px 15px 2px #0a0a0a;
+    background-color: rgb(19, 19, 19);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    border-radius: 0px 10px 10px 0px;
+    transition: left 1s;
+    z-index: 100;
+}
+.fa-music, .soundCloud{
+    color: white;
+    padding: 20px 0px 30px 0px;
+    display: inline-block;
+}
+.soundCloud{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.navlist{
+    font-weight: 600;
+    transition: 0.3s;
+}
+.navlist:hover{
+    font-size: 20px;
+    text-shadow: 0px 0px 20px;
+}
+.navbar > a{
+    color: white;
+    text-decoration: none;
+}
+.active-tab{
+    transition: 1s;
+    font-size: 20px;
+    text-shadow: 0px 0px 20px;
+    width: 90%;
+    background-color: #242424;
+    text-align: center;
+    border-radius: 15px;
+}
+#logOut{
+    margin-top: 500px;
+}
+
+/*--search--*/
+.searchtab{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.searchResult{
+    display: flex;
+    position: relative;
+}
+#search{
+    z-index: 2;
+    border-radius: 60px;
+    background-color: #161616;
+    font-size: 1rem;
+    color: white;
+    border: 0;
+    width: 350px;    
+    height: 30px;
+    padding: 10px;
+}
+.result{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    overflow-x: auto;
+    height: 500px;
+    border-radius: 15px;
+    top: -1000px;
+}
+.result ul{
+    color: white;
+    background-color: rgb(65, 65, 65);
+    display: block;
+    padding: 35px 10px 10px 10px;
+}
+.result ul li{
+    list-style: none;
+}
+.result ul li:hover{
+    background-color: #575757;
+    border-radius: 10px;
+}
+#searchBtn{
+    padding: 5px;
+    border-radius: 60px;
+    background-color: #161616c7;
+    outline: 0;
+    border: 0;
+    color: white;
+    width: 110px;
+    font-weight: 600;
+    margin: 10px 0px 0px 0px;
+}
+/*--content--*/
+.content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    width: 70%;
+}
+.slideWrapper{
+    position: relative;
+}
+.slides{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(7, 1fr);
+    padding-top: 15px;
+    overflow-x: auto;
+}
+.music1{
+    background: rgba(0, 0, 0, 0.3) url(painting-mountain-lake-with-mountain-background_188544-9126.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+.music2{
+    background: rgba(0, 0, 0, 0.3) url(360_F_555824600_OvpqblejjhjExcDDulsWkY3RxDrAr2hF.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+.music3{
+    background: rgba(0, 0, 0, 0.3) url(images.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+.music4{
+    background: rgba(0, 0, 0, 0.3) url(ultra-detailed-nebula-abstract-wallpaper-4_1562-749.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+.music5{
+    background: rgba(0, 0, 0, 0.3) url(pexels-pixabay-531756.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+.music6{
+    background: rgba(0, 0, 0, 0.3) url(beautiful-sky-background-and-wallpaper-of-white-and-gray-clouds-in-blue-sky-free-photo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+.music7{
+    background: rgba(0, 0, 0, 0.3) url(360_F_526854857_FFbu7oodabYdX5GaePaE6VrE0I5xGzYR.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+.music{
+    z-index: 0;
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    overflow-x: hidden;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.musicInfo{
+    padding-left: 10px;
+    margin-top: 175px;
+    background-color: rgba(0, 0, 0, 0.61);
+    height: 55px;
+    overflow-y: auto;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.music > div{
+    bottom: 0px;
+    left: 5px;
+    color: white;
+}
+.slideBtn{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #444444; 
+    outline: 0;
+    border: 0;
+    color: white;
+    position: absolute;
+    font-size: 15px;
+    top: 50%;
+    transition: 0.3s;
+    z-index: 1;
+}
+.slideBtn:hover{
+    background-color: #575757;
+}
+#prevBtn{
+    left: -20px;
+}
+#nextBtn{
+    right: -20px;
+}
+
+/*--songs--*/
+.songListContainer{
+    display: flex;
+    background-color: rgb(19, 19, 19);
+    margin-top: 10px;
+    border-radius: 15px;
+    height: 57%;
+    overflow-x: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.songDetailContainer{
+    display: flex;
+    gap: 10px;
+    width: 96%;
+    background-color: #242424;
+    border-radius: 15px;
+    height: 85%;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+}
+.songList{
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    overflow-x: auto;
+    align-items: center;
+    width: 100%;
+    flex-basis: 65%;
+    margin-left: -30px;
+    margin-left: 2px;
+    border-radius: 15px;
+    background-color: #1f1f1f;
+}
+
+.songDetail{
+    flex-basis: 31%;
+    height: 95%;
+    background-color: #333333;
+    border-radius: 15px;
+    display: grid;
+    border: #111111 solid 2px;
+}
+.songDetail p{
+    color: white;
+}
+.song{
+    width: 90%;
+    position: inherit;
+    background-color: #333333;
+    height: 40px;
+    margin: 5px 0px;
+    border-radius: 15px;
+    color: white;
+}
+.song p{
+    font-size: 15px;
+    text-align: center;
+}
+
+/*--playingTrack--*/
+.playingTrackInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -50px
+}
+.playList{
+    display: block;
+    color: white;
+    margin: 5px;
+    font-weight: 1000;
+    font-size: 20px;
+}
+.playingTrackPicture{
+    background: rgba(0, 0, 0, 0.3) url(painting-mountain-lake-with-mountain-background_188544-9126.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    border-radius: 15px 15px 0px 0px;
+    height: 170px;
+}
+.playingContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin-top: -30px;
+}
+.active-song{
+    transition: 1s;
+    background-color: #afafaf;
+    color: black;
+    box-shadow: 0px 0px 10px 2px #646464;
+}
+.progressBarContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 90%;
+    background-color: #555555;
+    border-radius: 15px;
+}
+#progressBar{
+    -webkit-appearance: none;
+    width: 85%;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#progressBar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: #444444;
+    height: 23px;
+    width: 23px;
+    border: 5px solid rgb(12, 12, 12);
+    border-radius: 50%;
+}
+.playingButton{
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+}
+.playingTrackContainer{
+    height: 100%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #444444;
+    border-radius: 15px;
+    margin-top: -30px;
+    border: #1f1f1f solid 2px;
+    gap: 15px;
+}
+.playingTrackBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+}
+.playingTrackBtn > div{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d1d1d;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px 2px rgb(0, 0, 0);
+    margin: 0px 10px;
+}
+.playingTrackBtn div:nth-child(2){
+    transform: scale(1.5);
+}
+#title{
+    text-align: center;
+    margin: 5px;
+}
+.container #bars, .container .navbar #times{
+    display: none;
+}
+
+
+@media only screen and (max-width: 1100px){
+    .container{
+        gap: 0;
+        width: 100%;
+    }
+    .navbar a.class{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+    }
+    .navbar{
+        position: fixed;
+        gap: 0px;
+        top: 0;
+        width: 300px;
+        height: 100vh;
+        z-index: 2;
+        transition: right 2s ease-in-out;
+    }
+    .navbar .fa-solid{
+        font-size: 25px;
+    }
+    .container .navbar #times{
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 260px;
+        cursor: pointer;
+        color: white;
+    }
+    .container #bars{
+        position: absolute;
+        display: block;
+        top: 38px;
+        left: 30px;
+        color: white;
+    }
+    .content{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #search{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    *{
+        font-size: 12px;
+    }
+    .navbar a{
+        font-size: 20px;
+    }
+    .soundCloud{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .fa-times{
+        font-size: 30px;
+    }
+    .songDetailContainer{
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+    }
+    .songDetail{
+        width: 100%;
+        height: 70%;
+    }
+    .playingTrackPicture{
+        height: 100px;
+    }
+    .playingTrackInfo{
+        height: 80px;
+    }
+    .playingTrackBtn{
+        padding: 0;
+        margin: 0;
+    }
+    .playingTrackContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px;
+    }
+    .songList{
+        height: 100%;
+    }
+}

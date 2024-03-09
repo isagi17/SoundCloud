@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar" id="sidemenu">
+            <i class="fa-solid fa-music"><p class="soundCloud">Sound Cloud</p></i>
+            <a href="#" class="navlist active-tab" id="home" onclick="openTab('home')">Home</a>
+            <a href="#" class="navlist" id="logOut" onclick="logOut()">Log Out</a>
+            <a href="#" class="navlist" id="settings" onclick="openTab('settings')">Settings</a>
+            <i class="fa-solid fa-times" id="times" onclick="closeMenu()"></i>
+        </div>
+        <i class="fa-solid fa-bars" id="bars" onclick="openMenu()"></i>
+        <div class="content">
+            <div class="searchtab">
+                <div class="searchResult">
+                    <input type="text" id="search">
+                    <div class="result">
+                    
+                    </div>
+                </div>
+                
+                <button id="searchBtn">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+                
+            </div>
+            
+            <div class="slideWrapper">
+                <button id="prevBtn" class="slideBtn"><</button>
+                <div class="slides">
+                    <div class="music music1" id="Music\Play Dead - NEFFEX.mp3" onclick="activeSong(id)">
+                        <div class="musicInfo">
+                            <p>Play Dead</p>
+                        </div>
+                    </div>
+                    <div class="music music2" id="Music\El Billete - Edgar Lopez and Quincas Moreira.mp3" onclick="activeSong(id)">
+                        <div class="musicInfo">
+                            <p>El Billete</p>
+                        </div>
+                    </div>
+                    <div class="music music3" id="Music\AETHER - Density & Time.mp3" onclick="activeSong(id)">
+                        <div class="musicInfo">
+                            <p>AETHER - Density & Time</p>
+                        </div>
+                    </div>
+                    <div class="music music4" id="Music\Bossa Sonsa - Quincas Moreira.mp3" onclick="activeSong(id)">
+                        <div class="musicInfo">
+                            <p>Bossa Sonsa</p>
+                        </div>
+                    </div>
+                    <div class="music music5" id="Music\EBB - Density & Time.mp3" onclick="activeSong(id)">
+                        <div class="musicInfo">
+                            <p>EBB</p>
+                        </div>
+                    </div>
+                    <div class="music music6" id="Music\Forest Find - TrackTribe (1).mp3" onclick="activeSong(id)">
+                        <div class="musicInfo">
+                            <p>Forest Find</p>
+                        </div>
+                    </div>
+                    <div class="music music7" id="Music\TRAVELATOR - Density & Time.mp3" onclick="activeSong(id)">
+                        <div class="musicInfo">
+                            <p>TRAVELATOR</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="nextBtn" class="slideBtn">></button>
+            </div>
+            <div class="songListContainer">
+                <div class="playList">PlayList</div>
+                    <div class="songDetailContainer">
+                        <div class="songList">
+                        <div class="song" id="Music\Play Dead - NEFFEX.mp3" onclick="activeSong(id)"><p>Play Dead</p></div>
+                        <div class="song" id="Music\El Billete - Edgar Lopez and Quincas Moreira.mp3" onclick="activeSong(id)"><p>El Billete</p></div>
+                        <div class="song" id="Music\AETHER - Density & Time.mp3" onclick="activeSong(id)"><p>AETHER</p></div>
+                        <div class="song" id="Music\Bossa Sonsa - Quincas Moreira.mp3" onclick="activeSong(id)"><p>Bossa Sonsa</p></div>
+                        <div class="song" id="Music\EBB - Density & Time.mp3" onclick="activeSong(id)"><p>EBB</p></div>
+                        <div class="song" id="Music\Forest Find - TrackTribe (1).mp3" onclick="activeSong(id)"><p>Forest Find</p></div>
+                        <div class="song" id="Music\TRAVELATOR - Density & Time.mp3" onclick="activeSong(id)"><p>TRAVELATOR</p></div>
+                        <div class="song" id="Music\TORSION - Density & Time.mp3" onclick="activeSong(id)"><p>TORSION</p></div>
+                        <div class="song" id="Music\SPRING OF DECEPTION - Density & Time.mp3" onclick="activeSong(id)"><p>SPRING OF DECEPTION</p></div>
+                        <div class="song" id="Music\PELAGIC - Density & Time.mp3" onclick="activeSong(id)"><p>PELAGIC</p></div>
+                        <div class="song" id="Music\Nature Nurture - Quincas Moreira.mp3" onclick="activeSong(id)"><p>Nature Nurture</p></div>
+                        <div class="song" id="Music\LITE BRITE - Density & Time.mp3" onclick="activeSong(id)"><p>LITE BRITE</p></div>
+                        <div class="song" id="Music\Lazy Laura - Quincas Moreira.mp3" onclick="activeSong(id)"><p>Lazy Laura</p></div>
+                        <div class="song" id="Music\La Docerola - Quincas Moreira.mp3" onclick="activeSong(id)"><p>La Docerola</p></div>
+                        <div class="song" id="Music\July - John Patitucci.mp3" onclick="activeSong(id)"><p>July</p></div>
+                        <div class="song" id="Music\Hotlanta - Track Tribe.mp3" onclick="activeSong(id)"><p>Hotlanta</p></div>
+                        <div class="song" id="Music\GROWTH_DECAY - Density & Time.mp3" onclick="activeSong(id)"><p>GROWTH DECAY</p></div>
+                        <div class="song" id="Music\Funky Carioca - Quincas Moreira.mp3" onclick="activeSong(id)"><p>Funky Carioca</p></div>
+                    </div>
+                    <div class="songDetail">
+                        <div class="playingTrackPicture"></div>
+                        <div class="playingContainer">
+                            <div class="progressBarContainer">
+                                <input type="range" value="0" id="progressBar">
+                            </div>
+                        </div>
+                        
+                        <div class="playingTrackInfo">
+                            <audio id="song" class="active-song" type="audio/mp3">
+                            </audio>
+                            <div class="playingTrackContainer">
+                                <p id="title"></p>
+                                <div class="playingTrackBtn">
+                                    <div class="nextPrev" id="prev" onclick=""><i class="fa-solid fa-backward-step"></i></div>
+                                    <div onclick="myPausePlay()"><i class="fa-solid fa-play" id="ctrlIcon" ></i></div>
+                                    <div class="nextPrev" id="next" onclick=""><i class="fa-solid fa-forward-step"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html> 
