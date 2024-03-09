@@ -197,7 +197,7 @@ const songArr = [
 ];
 
 function logOut(){
-    window.location.href = "logIn.html";
+    window.location.href = "index.html";
 }
 
 const search = document.getElementById("search");
