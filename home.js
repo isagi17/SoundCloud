@@ -61,7 +61,7 @@ function activeSong(songName){
             picture.style.background = "url(" + songObj[i].picture + ")";
             picture.style.backgroundRepeat = "no-repeat";
             picture.style.backgroundPosition = "center";
-            
+            picture.style.backgroundSize = "cover";
         }
     }
     song.src = songName;
@@ -114,9 +114,10 @@ const nextPrev = () => {
                             song.src = songObj[res].song;
                             song.play();
                             picture.style.background = "url(" + songObj[res].picture + ")";
+                            picture.style.background = "url(" + songObj[i].picture + ")";
                             picture.style.backgroundRepeat = "no-repeat";
                             picture.style.backgroundPosition = "center";
-                            //picture.style.backgroundBlendMode = "darken";
+                            picture.style.backgroundSize = "cover";
                             document.getElementById("title").innerHTML = songs[res].innerText;
                             break;
                         }
@@ -231,6 +232,10 @@ function searchClick(searchSong){
         if(searchSong.innerText === songObj[i].title){
             song.src = songObj[i].song;
             song.play();
+            picture.style.background = "url(" + songObj[i].picture + ")";
+            picture.style.backgroundRepeat = "no-repeat";
+            picture.style.backgroundPosition = "center";
+            picture.style.backgroundSize = "cover";
             results.style.position = "absolute";
             results.style.top = "-1000px";
             ctrlIcon.classList.add("fa-pause");
