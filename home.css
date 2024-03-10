@@ -453,6 +453,21 @@ body{
         width: 100%;
     }
 }
+@media only screen and (max-width: 360px) {
+    #search{
+        width: 80%;
+    }
+    .searchResult{
+        align-items: center;
+        justify-content: end;
+    }
+    .songList .song p{
+        font-size: 12px;
+    }
+    #title{
+        font-size: 10px;
+    }
+}
 @media only screen and (max-width: 700px) {
     *{
         font-size: 12px;
