@@ -72,6 +72,15 @@ body{
     display: flex;
     position: relative;
 }
+#glass{
+    position: absolute;
+    right: 0px;
+    color: white;
+    z-index: 4;
+    padding: 9px 10px 9px 10px;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 12px;
+}
 #search{
     z-index: 2;
     border-radius: 60px;
@@ -82,6 +91,7 @@ body{
     width: 350px;    
     height: 30px;
     padding: 10px;
+    padding-right: 30px;
 }
 .result{
     width: 100%;
@@ -454,12 +464,10 @@ body{
     }
 }
 @media only screen and (max-width: 360px) {
-    #search{
-        width: 80%;
-    }
     .searchResult{
         align-items: center;
         justify-content: end;
+        width: 80%;
     }
     .songList .song p{
         font-size: 12px;
@@ -510,5 +518,13 @@ body{
     }
     .songList{
         height: 100%;
+    }
+    .playingTrackBtn > div{
+        height: 25px;
+        width: 25px;
+        font-size: 10px;
+    }
+    .playingTrackBtn > div > i{
+        font-size: 10px;
     }
 }
